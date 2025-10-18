@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { StatusBadge } from '@/components/StatusBadge';
 import { toast } from 'sonner';
 import { MapPin, Package, Navigation } from 'lucide-react';
+import { Header } from '@/components/Header';
 
 interface Delivery {
   id: string;
@@ -92,7 +93,9 @@ const DriverDashboard = () => {
   };
 
   return (
-    <div className="p-6 space-y-6">
+    <div className="min-h-screen bg-gradient-to-br from-background via-primary/5 to-background">
+      <Header />
+      <div className="p-6 space-y-6">
       <div>
         <h1 className="text-3xl font-bold">Driver Dashboard</h1>
         <p className="text-muted-foreground">Your assigned deliveries</p>
@@ -185,6 +188,7 @@ const DriverDashboard = () => {
             </Card>
           ))
         )}
+      </div>
       </div>
     </div>
   );

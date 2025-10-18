@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { StatusBadge } from '@/components/StatusBadge';
 import { useNavigate } from 'react-router-dom';
 import { Package, Plus, MapPin } from 'lucide-react';
+import { Header } from '@/components/Header';
 
 interface Delivery {
   id: string;
@@ -59,7 +60,9 @@ const CustomerDashboard = () => {
   };
 
   return (
-    <div className="p-6 space-y-6">
+    <div className="min-h-screen bg-gradient-to-br from-background via-primary/5 to-background">
+      <Header />
+      <div className="p-6 space-y-6">
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold">My Deliveries</h1>
@@ -130,6 +133,7 @@ const CustomerDashboard = () => {
             </Card>
           ))
         )}
+      </div>
       </div>
     </div>
   );
