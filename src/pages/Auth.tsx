@@ -17,7 +17,7 @@ const Auth = () => {
   const [password, setPassword] = useState('');
   const [fullName, setFullName] = useState('');
   const [phone, setPhone] = useState('');
-  const [role, setRole] = useState<'admin' | 'driver' | 'customer'>('customer');
+  const [role, setRole] = useState<'driver' | 'customer'>('customer');
 
   const handleSignUp = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -186,7 +186,6 @@ const Auth = () => {
                       <SelectContent>
                         <SelectItem value="customer">Customer</SelectItem>
                         <SelectItem value="driver">Driver</SelectItem>
-                        <SelectItem value="admin">Admin</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
